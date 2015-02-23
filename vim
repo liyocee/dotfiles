@@ -1,4 +1,5 @@
-
+" Vim Settings
+" http://liyocee.github.io
 
 " """"""""""""""""""""""""""""""""""""""""""""""""
 " =============== General Settings ===============
