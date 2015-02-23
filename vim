@@ -107,6 +107,7 @@ else
     Plugin 'ervandew/supertab'
 endif
 Plugin 'suan/vim-instant-markdown'
+Plugin 'wincent/command-t'
 " Turn filetype back on
 filetype plugin indent on
 
