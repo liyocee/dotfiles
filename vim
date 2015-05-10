@@ -27,7 +27,6 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
-
 " Use expected backspace behavior
 set backspace=indent,eol,start
 
@@ -97,6 +96,7 @@ Plugin 'elzr/vim-json'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'Shutnik/jshint2.vim'
 "Bundle 'MarcWeber/vim-addon-mw-utils'
 "Bundle 'tomtom/tlib_vim'
 "Bundle 'garbas/vim-snipmate'
@@ -108,6 +108,7 @@ else
 endif
 Plugin 'suan/vim-instant-markdown'
 Plugin 'wincent/command-t'
+Plugin 'Raimondi/delimitMate'
 " Turn filetype back on
 filetype plugin indent on
 
@@ -177,6 +178,9 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
+" Open files using Command-T - shortcut
+nmap <Leader> f: CommandT
+
 " split windows
 nnoremap <A-h> split
 nnoremap <A-v> vsplit
@@ -236,3 +240,10 @@ if &term =~ '^xterm'
     " 5 -> blinking vertical bra                                                                            
     " 6 -> solid vertical bar                                                                               
 endif                        
+
+""""""""""""""""""""""""""""""""""""""""
+"==========Configure JsHint=================
+let jshint2_read = 1
+let jshint2_save = 1
+let jshint2_confirm = 0
+
