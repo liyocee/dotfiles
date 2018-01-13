@@ -13,7 +13,7 @@ set nocompatible
 " ================ General Config ====================
 
 set number                      "Line numbers are good
-set relativenumber
+"set relativenumber
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
@@ -27,16 +27,23 @@ set ruler
 set laststatus=2
 set ignorecase
 set smartcase
-set incsearch
+"set incsearch
 set showmatch
-set hlsearch
+"set hlsearch
 set linebreak
 set nolist
 set colorcolumn=110
-set spell spelllang=en_us
 set path=$PQD/**                    "Default path to be current dir, help in searching files
 set nosmartindent                   "Use filetype-specific plugins and indentation
 au BufRead,BufNewFile *.html,*.css set textwidth=0  "Turn off automatic line breaking in html and css
+
+
+" Spellings
+set spell spelllang=en_us
+hi clear SpellBad
+hi SpellBad cterm=underline,bold ctermfg=red
+nnoremap <leader>f 1z=           "Fix spelling with <leader>f
+nnoremap <leader>s :set spell!   "Toggle spelling visuals with <leader>s
 
 " Use two-space tabs for javascript
 autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2
@@ -81,7 +88,7 @@ nnoremap <Leader>0 :tablast<cr>
 " Aesthetics
 
 " colorscheme solarized
-set background=light
+" set background=light
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
